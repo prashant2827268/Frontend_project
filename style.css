@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color:#ffffff;
+    
+}
+
+html, body{
+    height:100%;
+    width:100%;
+}
+*::selection{
+    background-color: #fff;
+    color:#95C11E
+}
+body::-webkit-scrollbar{
+    display: block;
+    width:8px;
+    background-color: #95C11E;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 50px;
+}
+#nav{
+    height:135px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:50px;
+    position: fixed;
+    z-index: 99;
+    padding: 0 110px;
+}
+
+#nav h4{
+
+    font-weight: 500;
+}
+#nav img{
+    height:70px;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #95C11E;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height:200px;
+    width:200px;
+    background-color: #96c11e7f;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 10;
+    filter: blur(50px);
+}
+video{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.379);
+    
+}
+#page1{
+    height:100vh;
+    width:100%;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative; 
+    z-index: 10;   
+}
+
+#page1 h1{
+    font-size: 110px;
+    position: relative;
+    font-weight: 800;
+}
+#page1 h1::before{
+    content:"Eat. Drink. Play.";
+    color:black;
+    position: absolute;
+    top:-4px;
+    left:-4px;
+    z-index: -1;
+    -webkit-text-stroke: 2px #95C11E;
+}
+
+#page1 h2{
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+#page1 p{
+    font-size: 18px;
+    position: relative;
+    font-weight: 500;
+    width:50%;   
+}
+#page1 #arrow{
+    height:150px;
+    width:150px;
+    /* background-color: red; */
+    position: absolute;
+    display: flex;
+    left:-3%;
+    bottom: -0%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #95C11E;
+    transition: all ease 0.5s;
+
+}
+
+#page1 #arrow i{
+    font-size: 50px;
+    font-weight: 100;
+}
+
+#page1 #arrow:hover{
+    scale:0.5;
+    background-color: #95C11E;
+}
+
+#page2{
+   min-height: 100vh;
+    width:100%;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller{
+    display: flex;
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+ }
+#scroller::-webkit-scrollbar{
+    display: none;
+} 
+#scroller-in{
+white-space: nowrap;
+display: inline-block;
+animation-name: scroll;
+animation-duration: 25s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+
+}
+#scroller h4{
+    display: inline-block;
+    font-size:100px;
+    font-weight: 800;
+    font-family: gilroy;
+    margin-right: 12px;
+    color: transparent;
+    -webkit-text-stroke: 2px #95C11E;  
+    transition: all linear 0.4s;
+}
+#scroller h4:hover{
+    color:#95C11E
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }   
+}
+
+#about-us{
+    margin-top: 100px;
+    display:flex;
+    height:40vh;
+    width:100%;
+    /* background-color: green; */
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+#about-us img{
+    height:160px;
+    width:160px;
+    border-radius: 10px;
+}
+#about-us-content{
+    text-align: center;
+    width:50%;
+}
+#about-us-content h3{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+#about-us-content p{
+    font-size: 20px;
+    line-height: 25px;
+}
+
+#cards-container{
+    /* margin-top:30px; */
+    /* background-color: red; */
+    height:60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:100px;
+    position: relative;
+    z-index: 10;
+}
+.card{
+    height:80%;
+    width:21%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    
+}
+#card1{
+    background-image: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+}
+#card2{
+    background-image: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+}
+#card3{
+    background-image: url("https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+}
+
+.overlay{
+    background-color: #95C11E;
+    text-align: center;
+    height: 100%;
+    width:100%;
+    border-radius: 20px;
+    padding:30px 10px;
+    opacity:0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4{
+    font-size: 25px;
+    color:#000;
+    text-transform: uppercase;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+#green-div{
+    height:40vh;
+    /* background-color: #95C11E; */
+    background: linear-gradient(to left bottom ,#24A536,#AADC22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+#green-div img{
+    height: 100%;
+    width:10%;
+    object-fit: cover;
+}
+
+#green-div h2{
+    width:60%;
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 750;
+    line-height: 50px;
+}
+
+#page3{
+    height:100vh;
+    width:100%;
+    /* background-color: rgb(243, 4, 4); */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page3 img{
+    height:40px;
+    position: absolute;
+
+}
+#page3 #colon1{
+    left:20%;
+    top:25%
+}
+
+#page3 #colon2{
+    right:21%;
+    bottom:23%
+}
+
+#page3>p{
+    font-size: 25px;
+    width:50%;
+    font-weight: 800;
+    line-height: 40px;
+    text-align: center;
+}
+#page4{
+    height:40vh;
+    width:100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:60px;
+    position: relative;
+}
+
+.elem{
+    height:65%;
+    width:25%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+.elem h2{
+    height:100%;
+    width:100%;
+    background-color: #95C11E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#000;
+    font-size: 25px;
+    font-weight: 800;
+    position: absolute;
+    transition: all ease 0.5s;
+    z-index: 10;
+}
+
+.elem img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    scale: 1.1;
+}
+
+.elem:hover h2{
+    color: white;
+    background-color: transparent;
+}
+
+.elem:hover img{
+    scale:1;
+}
+
+#page4 h1{
+    font-size: 80px;
+    position: absolute;
+    top:-16%;
+    color:#000;
+    font-weight: 900;
+    font-family: "Poppins";
+    -webkit-text-stroke: 1px white;
+}
+
+#footer{
+    min-height:45vh;
+    width:100%;
+    background: linear-gradient(to left bottom ,#24A536,#AADC22);   
+    position: relative;
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+}
+
+#footer>img{
+    position: absolute; 
+    left: 0;
+    height: 100%;
+    z-index: 0;
+    
+}
+
+#f-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:65px;
+    padding-left: 70px;
+}
+#f-container #f-img img{
+    height:100px;
+}
+
+#footer h3{
+    font-size: 30px;
+    color: #000;
+    font-weight: 700;
+    white-space: nowrap;
+}
+pre{
+    color:#000;
+    font-size:17px;
+    font-weight: 800;
+}
